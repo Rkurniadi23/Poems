@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow:wght@200;400&family=Dancing+Script&family=Handjet&family=Inter:wght@200&family=Roboto:wght@100&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Edit Poem</title>
+</head>
+<body>
+    <div class="dash-background">
+        <div class="top-nav">
+            <div class="dash_logo_title">
+                <a href="/dashboard" class="nav-title"><img src="/../static/img/poems_logo.png" alt="logo_image" class="logo"></a>
+            </div>
+            <div class="profile-nav">
+                <a href="/poem/create" class="nav-link">Write a Poem</a>
+                <a href="/logout" class="nav-link">Logout</a>
+            </div>
+        </div>
+        <div class="login-format">
+            <div class="edit-left-panel">
+                <h1 style="text-align: center; margin-top:40px;">Edit Your Poem</h1>
+                <h3>Current Poem:</h3>
+                <div class="current-input">
+                    <h4>Poem Name:</h4>
+                    <p>{{poem.title}}</p>
+                </div>
+                <div class="current-input">
+                    <h4>Author:</h4>
+                    <p>{{poem.author}}</p>
+                </div>
+                <div class="current-input">
+                    <h4>Genre:</h4>
+                    <p>{{poem.genre}}</p>
+                </div>
+                <div class="current-input">
+                    <h4>Poem Text:</h4>
+                    <p>{{poem.poem_text}}</p>
+                </div>
+            </div>
+            <div class="edit-right-panel">
+                <form action="/poem/update" class="form-edit" method="POST">
+                    <h2 style="text-align: center; margin-bottom:20px;">Enter New Information</h2>
+                    <input type="hidden" value="{{poem.id}}" name="id">
+                    <div class="index-row">
+                        <label for="">New Poem Title:</label>
+                        <input type="text"  class="form-input" name="title">
+                    </div>
+                    <div class="index-row">
+                        <label for="">New Author:</label>
+                        <input type="text" class="form-input" name="author">
+                    </div>
+                    <div class="index-row">
+                        <label for="">New Genre:</label>
+                        <input type="text" class="form-input" name="genre">
+                    </div>
+                    <div class="index-row">
+                        <label for="">New Poem Text:</label>
+                        <textarea rows="5" class="form-input" name="poem_text"></textarea>
+                    </div>
+                    <div class="btn-input">
+                        <input class="submit-btn" type="submit" value="Update">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

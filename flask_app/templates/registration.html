@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow:wght@200;400&family=Dancing+Script&family=Handjet&family=Inter:wght@200&family=Roboto:wght@100&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>User Registration</title>
+</head>
+<body>
+    <div class="background-center">
+        <div class="register-format">
+            <h1>Sign Up!</h1>
+            <div>
+                <div class="validation-text">
+                    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                    {% if messages %}                            <!-- check if there are any messages -->
+                    {% for message in messages %}            <!-- loop through the messages -->
+                    <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="form-create">
+                    <form action="/register" class="form-register" method="POST">
+                        <div class="create-row">
+                            <label for="">First Name:</label>
+                            <input type="text"  class="form-input" name="first_name">
+                        </div>
+                        <div class="create-row">
+                            <label for="">Last Name:</label>
+                            <input type="text" class="form-input" name="last_name">
+                        </div>
+                        <div class="create-row">
+                            <label for="">Email:</label>
+                            <input type="email" class="form-input" name="email">
+                        </div>
+                        <div class="create-row">
+                            <label for="">Password:</label>
+                            <input type="password" class="form-input" name="password">
+                        </div>
+                        <div class="create-row">
+                            <label for="">Confirm Password:</label>
+                            <input type="password" class="form-input" name="confirm_pw">
+                        </div>
+                        <div class="register-input">
+                            <input class="submit-btn" style="width: 150px;" type="submit" value="Register!">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

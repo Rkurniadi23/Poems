@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow:wght@200;400&family=Dancing+Script&family=Handjet&family=Inter:wght@200&family=Roboto:wght@100&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>User Login</title>
+</head>
+<body>
+    <div class="background">
+        <div class="login-format">
+            <div class="left-panel">
+                <img src="/../static/img/login-poems.jpg" alt="logo_img" id="main-logo">
+            </div>
+            <div class="right-panel">
+                <h1 class="welcome-msg">Welcome to Poems</h1>
+                <div class="form-container">
+                    <h1>Login</h1>
+                    <div class="validation-text">
+                        {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                            {% if messages %}                            <!-- check if there are any messages -->
+                                {% for message in messages %}            <!-- loop through the messages -->
+                                    <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class="signup-form">
+                        <form action="/login" class="form-login" method="POST">
+                            <div class="index-row">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-input" name="email">
+                            </div>
+                            <div class="index-row">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-input" name="password">
+                            </div>
+                            <div>
+                                <input class="submit-btn" type="submit" value="Login">
+                            </div>
+                        </form>
+                        <div class="register-optn">
+                            <p>Not registered? Join today.</p>
+                            <a href="/signup" class="link-btn">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Text Submission</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow:wght@200;400&family=Dancing+Script&family=Handjet&family=Inter:wght@200&family=Roboto:wght@100&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body class="dash-background">
+    <div class="top-nav">
+        <a href="/dashboard" class="nav-title"><img src="/../static/img/poems_logo.png" alt="logo_image" class="logo"></a>
+        <div class="profile-nav">
+            <a href="/logout" class="nav-link">Logout</a>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <!-- New Form on the Left Side -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center add-box">
+                        <h4>New Poem Submission</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/poem/create/process" method="post">
+                            <div class="form-group">
+                                <label for="title">Title:</label>
+                                <input type="text" id="title" name="title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="author">Author:</label>
+                                <input type="text" id="author" name="author" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="genre">Genre:</label>
+                                <input type="text" id="genre" name="genre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="poem_text">Poem Text:</label>
+                                <textarea id="poem_text" name="poem_text" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group text-center">
+                                <input type="submit" value="Submit" class="submit-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Existing Content on the Right Side -->
+            <div class="col-md-6">
+                <div class="validation-text">
+                    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                        {% if messages %}                            <!-- check if there are any messages -->
+                            {% for message in messages %}            <!-- loop through the messages -->
+                                <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="card">
+                    <div class="card-header text-center ai-box">
+                        <h4>AI Poems</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/openai" method="post" id="openaiForm">
+                            <div class="form-group">
+                                <label for="input">Tell our AI your idea for a poem:</label>
+                                <textarea name="input" id="input" class="form-control" rows="10"></textarea>
+                            </div>
+                            <div class="form-group text-center">
+                                <input type="submit" value="Submit" class="submit-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="response" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='JS/openai.js') }}"></script>
+</body>
+
+</html>

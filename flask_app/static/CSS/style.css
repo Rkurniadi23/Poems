@@ -1,0 +1,426 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto';
+}
+
+.validation-text {
+    color: red;
+}
+
+.background-center {
+    height: 100vh;
+    display: flex;
+    background-color:rgb(189, 220, 205);
+}
+
+.logo {
+    width: 40px;
+}
+/* .................................LOGIN & REGISTRATION. */
+.login-format {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.right-panel {
+    background-color: rgb(212, 232, 222);
+    color:rgb(106, 78, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    box-shadow: -2px 0px 50px;
+}
+
+.welcome-msg {
+    font-size: 40px;
+}
+
+.register-optn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.register-format {
+    background-color: rgb(214, 231, 222);
+    color: rgb(106, 78, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+    padding: 30px;
+    border:1px solid rgba(128, 128, 128, 0.332);
+    box-shadow: 2px 2px 10px;
+    border-radius: 15px;
+    gap: 50px;
+}
+
+.form-create {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-register {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 20px;
+}
+
+.form-container {
+    margin-top: 50px;
+}
+
+#main-logo {
+    width:100%;
+    height: 100%;
+    box-shadow: 1px 1px 5px;;
+}
+
+
+/* .......................................FORMS. */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    gap: 60px;
+    margin-top: 30px;
+}
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.index-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-input {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(128, 128, 128, 0.292);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px -5px;
+    padding: 10px;
+    font-size: 15px;
+    width: 300px;
+}
+
+.create-row {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.register-input {
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+
+.edit-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.index-row label {
+    font-weight: 500;
+}
+/* .....................................................BUTTONS/LINKS. */
+.submit-btn {
+    background-color: rgba(178, 206, 161, 0.66);
+    color: rgb(46, 85, 30);
+    text-align: center;
+    padding: 8px;
+    font-size: 15px;
+    border: 2px solid rgb(105, 151, 87);
+    font-weight: 800;
+    border-radius: 10px;
+    min-width: 150px;
+    margin-top:15px;
+}
+
+.link-btn {
+    text-decoration: none;
+    text-align: center;
+    width: 70px;
+    color: rgb(90, 71, 25);
+    background-color: rgba(90, 71, 25, 0.161);
+    border: 2px solid rgb(90, 71, 25);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.edit-btn {
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    color:rgb(86, 70, 32);
+    background-color: rgba(232, 186, 48, 0.773);
+    border: 2px solid rgb(121, 101, 56);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+/* .......................................TOP NAV */
+.top-nav {
+    background-color: rgb(177, 224, 201);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(106, 78, 51);
+    padding: 20px 40px;
+    box-shadow: 2px 2px 10px;
+}
+
+.profile-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(106, 78, 51);
+    background-color: rgba(106, 78, 51, 0.111);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border:1px solid rgb(106,78,51);
+    border-radius: 5px;
+}
+
+.nav-title {
+    text-decoration: none;
+    color:rgb(106, 78, 51);
+    text-shadow: 1.5px 1.5px rgba(255, 255, 255, 0.419);
+}
+
+.dash_logo_title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* ........................................DASHBOARD */
+.dash-title {
+    color: rgb(106, 78, 51);
+    padding: 10px 100px;
+    margin-top: 30px;
+}
+
+.dash-background {
+    background-color: rgb(212, 232, 222);
+    height: 100vh;
+}
+
+/* .....................................DASH TABLE */
+.main-container {
+    padding: 40px;
+}
+.table-container {
+    background-color: rgb(203, 227, 216);
+    padding: 20px 40px;
+    border:2.5px solid rgb(106, 78, 51);
+    border-radius: 15px;
+    margin: 0px 20px;
+}
+
+/* Style for tabs */
+.tabs {
+    display: flex;
+    margin-left: 50px;
+}
+
+.tab-button {
+    background-color: rgb(180, 221, 201);
+    color: rgb(106, 78, 51);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border:1px solid rgb(106, 78, 51);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.tab-button:hover {
+    background-color: rgb(138, 190, 166);
+}
+
+/* Style for tab content */
+.tab-content {
+    display: none;
+}
+
+table {
+    color: rgb(80, 54, 30);
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table-title {
+    color: rgb(106, 78, 51);
+    text-align: center;
+}
+.table-container a {
+    color: rgba(163, 143, 59, 0.947)
+}
+
+/* Show the first tab by default */
+#tab1 {
+    display: block;
+}
+
+thead {
+    border-bottom: 1px solid rgb(106, 78, 51);
+}
+
+/* ....................................ADD POEM */
+.add-background {
+    background-color: rgb(212, 232, 222);
+}
+
+.add-box {
+    background-color: rgb(180, 221, 201);
+    color:rgb(106, 78, 51);
+    border: 2px solid rgba(183, 172, 153, 0.274);
+}
+
+.ai-box {
+    background-color: rgb(180, 221, 201);
+    color:rgb(106, 78, 51);
+    border: 2px solid rgba(183, 172, 153, 0.274);
+}
+
+.card-body {
+    background-color: rgb(203, 227, 216);
+    border: 2px solid rgba(183, 172, 153, 0.274);
+}
+
+/*...................................... VIEW ONE POEM */
+.display-background {
+    height: 100vh;
+}
+
+.display-format {
+    display: flex;
+    height: 100%;
+}
+
+.display-right-panel {
+    background-color: rgb(212, 232, 222);
+    color: rgb(106, 78, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    min-height: 300px;
+    padding:30px;
+    border: 5px double rgb(106, 78, 51);
+    border-radius: 10px;
+    color: rgb(106, 78, 51);
+}
+
+.display-left-panel {
+    background-color: rgb(204, 226, 215);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.display-left-panel h1 {
+    color: rgb(106, 78, 51);
+}
+
+.display-left-panel h2 {
+    text-align: center;
+    color: rgb(106, 78, 51);
+    width: 350px;
+    padding:10px;
+    border: 2px solid rgb(106, 78, 51);
+    border-radius: 10px;
+}
+
+/* .......................................... EDIT POEM*/
+
+.edit-left-panel {
+    background-color: rgb(204, 226, 215);
+    color: rgb(106, 78, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    overflow:scroll;
+}
+
+.edit-right-panel{
+    background-color: rgb(212, 232, 222);
+    color: rgb(106, 78, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    gap: 20px;
+}
+
+.current-input {
+    display: flex;
+    gap:10px;
+    width: 350px;
+    border: 2px double gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
